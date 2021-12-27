@@ -25,7 +25,7 @@ const createBoards = (input) => {
 
 const boards = createBoards(readings.slice(2));
 
-// Play a single draw on a board and return true if the draw produces a win.
+// Play a single draw on a board and return the board's score if the draw produces a win.
 const playBoard = (board, draw) => {
     for (let row = 0; row < board.rows.length; row++) {
         for (let col = 0; col < board.rows[row].length; col++) {
