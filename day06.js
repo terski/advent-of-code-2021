@@ -1,11 +1,5 @@
 import fs from 'fs';
 
-const testValues = [3, 4, 3, 1, 2];
-const expectedResult = [
-    6, 0, 6, 4, 5, 6, 0, 1, 1, 2, 6, 0, 1, 1, 1, 2, 2, 3, 3, 4, 6, 7, 8, 8, 8,
-    8,
-];
-
 const values = fs
     .readFileSync('./day06.txt', 'utf8')
     .split(',')
@@ -29,5 +23,10 @@ const spawn = (input, days) => {
     return fish;
 };
 
+const start = performance.now();
 const result = spawn(values, 80);
-result.length //?
+const end = performance.now();
+const duration = end - start; // about 220ms
+duration; //?
+
+result.length; //?
